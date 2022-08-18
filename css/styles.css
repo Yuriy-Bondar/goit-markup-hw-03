@@ -43,16 +43,72 @@ h1, h2, h3, h4, p, ul {
     margin: 0;
     padding: 0;
 }
+.list {
+    list-style: none;
+}
+.link {
+    text-decoration: none;
+}
 header {
     border-bottom: 1px solid var(--header-border-color);
 }
-.container{
+.container {
     width: 1200px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
     outline: solid 2px red;
+}
+.header{
+    display: flex;
+}
+
+.nav-flex {
+    display: flex;
+    align-items: center;
+}
+
+.nav .link,
+.contacts .link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    color: var(--title-color);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+}
+.nav {
+    display: flex;
+    margin-left: 93px;
+}
+.nav .item+.item{
+    margin-left:50px;
+}
+.nav a:hover,
+.nav a:focus {
+    color: var(--hover-color);
+}
+
+.nav .current {
+    color: var(--hover-color);
+}
+
+.contacts {
+    display: flex;
+    margin-left: auto;
+}
+.contacts .item+.item {
+    margin-left: 50px;
+}
+.contacts .link {
+    color: var(--description-color);
+}
+
+.contacts a:hover {
+    color: var(--hover-color);
 }
 .section {
     padding: 94px 0;
@@ -73,32 +129,7 @@ header {
 .logo2 {
     color: var(--logo-color3);
 }
-.list {
-    list-style: none;
-}
-.link {
-    text-decoration: none;
-    }
-.nav .link, .contacts .link {
-    color: var(--title-color);
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    }
-.nav a:hover, .nav a:focus {
-    color: var(--hover-color);
-}
-.nav .current {
-    color: var(--hover-color);
-}
 
-.contacts .link {
-    color: var(--description-color);
-}
-.contacts a:hover {
-    color: var(--hover-color);
-}
 .hero {
     background-color: var(--hero-bgc-color);
     padding-top: 200px;
