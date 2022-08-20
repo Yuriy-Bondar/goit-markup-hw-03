@@ -49,6 +49,13 @@ h1, h2, h3, h4, p, ul {
 .link {
     text-decoration: none;
 }
+.section {
+    padding: 94px 0;
+}
+section.no-top-padding {
+    padding-top: 0;
+}
+
 header {
     border-bottom: 1px solid var(--header-border-color);
 }
@@ -58,7 +65,6 @@ header {
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
-    outline: solid 2px red;
 }
 .header{
     display: flex;
@@ -85,7 +91,7 @@ header {
     margin-left: 93px;
 }
 .nav .item+.item{
-    margin-left:50px;
+    margin-left: 50px;
 }
 .nav a:hover,
 .nav a:focus {
@@ -111,7 +117,8 @@ header {
     color: var(--hover-color);
 }
 .section {
-    padding: 94px 0;
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
 .logo {
     display: inline-block;
@@ -131,13 +138,15 @@ header {
 }
 
 .hero {
-    background-color: var(--hero-bgc-color);
     padding-top: 200px;
     padding-bottom: 200px;
+    background-color: var(--hero-bgc-color);
     text-align: center;
     }
 
 .hero .h1 {
+    margin-bottom: 30px;
+    
     color: var(--hero-text-color);
     font-weight: 900;
     font-size: 44px;
@@ -145,12 +154,16 @@ header {
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    margin-bottom: 30px;
 }
 .button-hero {
     display: inline-block;
-    color: var(--button-text-color);
+    padding: 10px 32px;
+    min-width: 216px;
+    border-radius: 4px;
+    border: none;
     background-color: var(--button-bgc-color);
+
+    color: var(--button-text-color);
     font-family: inherit;
     font-weight: 700;
     font-size: 16px;
@@ -159,25 +172,35 @@ header {
     text-align: center;
     letter-spacing: 0.06em;
     cursor: pointer;
-    margin-left: auto;
-    margin-right: auto;
-    min-width: 216px;
-    min-height: 50px;
-    border-radius: 4px;
-    border: none;
-    padding: 10px 32px;
+    
 }
 .button-hero:active {
     background-color: var(--button-active-color);
 }
+.advantage {
+    display: flex;
+    justify-content: space-between;
+    }
+.advantage .item {
+    width: 270px;
+}
 .advantage .h3 {
+    margin-bottom: 10px;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    margin-bottom: 10px;
 }
+.description {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--description-color);
+}
+
+
 .button-project {
     color: var(--title-color);
     background-color: var(--button-project-bgc);
@@ -195,42 +218,60 @@ header {
     background-color: var(--hover-color);
 }
 
-.advantage .description {
-    color: var(--description-color);
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    letter-spacing: 0.03em;
-}
-.team {
+.team-section {
     background-color: var(--team-bgc-color);
 }
 .title {
+    margin-bottom: 50px;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.16;
     text-align: center;
     letter-spacing: 0.03em;
-    margin-bottom: 50px;
+}
+.work {
+    display: flex;
+    justify-content: space-between;
+}
+.work .item {
+    display: block;
 }
 .img {
+    display: block;
     margin-bottom: 30px;
+    max-width: 100%;
+    height: auto;
 }
+.team {
+    display: flex;
+    justify-content: space-between;
+    }
+.team .item {
+    background-color: #fff;
+    box-shadow:
+        0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+
 .member {
+    margin-bottom: 10px;
+
     font-weight: 500;
     font-size: 16px;
     line-height: 1.18;
-    /* text-align: center; */
-    letter-spacing: 0.03em;
-
-    margin-bottom: 10px;
+    text-align: center;
+    letter-spacing: 0.03em; 
 }
 .tasks {
+    margin-bottom: 30px;
+
     color: var(--description-color);
     font-weight: 400;
     font-size: 16px;
     line-height: 1.18;
-    /* text-align: center; */
+    text-align: center;
     letter-spacing: 0.03em;
 }
 .project-name {
@@ -247,24 +288,28 @@ header {
     letter-spacing: 0.03em;
 }
 .footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
     background-color: var(--footer-bgc-color);
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
-    padding: 60px;
 }
 .footer .logo {
     margin-bottom: 20px;
 }
 .footer .adress {
+    margin-bottom: 9px;
+
     color: var(--footer-adress-color);
     font-style: normal;
-    margin-bottom: 9px;
 }
 .fcontacts .link {
-    color: var(--footer-contacts-color);
     margin-bottom: 9px;
+
+    color: var(--footer-contacts-color);
 }
 .fcontacts .link:hover, .fcontacts .link:focus {
     color: var(--hover-color);
